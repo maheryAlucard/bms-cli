@@ -17,6 +17,7 @@
     "bms": "./bin/index.js"
   },
   "dependencies": {
+    "copy-replace": "^1.1.0",
     "yargs": "^17.3.1"
   }
 }
