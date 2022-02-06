@@ -1,0 +1,22 @@
+{
+  "name": "bms-cli",
+  "version": "1.0.0",
+  "description": "backend mobile simplified",
+  "main": "index.js",
+  "author": "Mahery",
+  "license": "MIT",
+  "keywords": [
+    "cli",
+    "bms",
+    "fastify",
+    "react-native",
+    "mobile",
+    "backend"
+  ],
+  "bin": {
+    "bms": "./bin/index.js"
+  },
+  "dependencies": {
+    "yargs": "^17.3.1"
+  }
+}
