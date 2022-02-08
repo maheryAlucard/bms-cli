@@ -9,7 +9,7 @@ const backend = (action, actionRef, secArg) => {
       actionsList = actionsList + "\n- " + key;
     });
     console.log(
-      "Available action are: " +
+      "Available action for 'backend' are: " +
         actionsList +
         "\n for more help type: bms --help"
     );
