@@ -2,7 +2,7 @@ const { execSync } = require("child_process");
 
 const sochandler = (secArg) => {
   try {
-    execSync("npm run g:sochandler " + secArg, { stdio: [0, 1, 2] });
+    execSync("npm run g:sochandler " + secArg[1], { stdio: [0, 1, 2] });
     console.log("\nMode sets created.\n");
   } catch (error) {
     console.log(

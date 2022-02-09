@@ -9,7 +9,7 @@ const showHelp = () => {
 
 const switchArgs = () => {
   let argv = yargs.argv._[0];
-  let secArg = yargs.argv._[1];
+  let secArg = yargs.argv._;
   if (argv == null) {
     showHelp();
     return;
@@ -17,7 +17,10 @@ const switchArgs = () => {
     const [platform, action, actionRef] = argv.split(":");
     if (platformAction[platform]) {
       platformAction[platform](action, actionRef, secArg);
-    }else console.log("Available platform are: \n- backend\n- mobile\n for more help type: bms --help")
+    } else
+      console.log(
+        "Available platform are: \n- backend\n- mobile\n for more help type: bms --help"
+      );
   }
 };
 

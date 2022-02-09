@@ -1,6 +1,7 @@
 const creatAction = require("./BackendActions/creatAction");
 const gAction = require("./BackendActions/gAction");
 const dbAction = require("./BackendActions/dbAction");
+const addAction = require("./BackendActions/addAction");
 
 const creatBaseAction = (actionReq) => (actionRef, secArg) => {
   if (actionReq[actionRef]) {
@@ -21,5 +22,6 @@ const creatBaseAction = (actionReq) => (actionRef, secArg) => {
 const create = creatBaseAction(creatAction);
 const g = creatBaseAction(gAction);
 const db = creatBaseAction(dbAction);
+const add = creatBaseAction(addAction);
 
-module.exports = { create, g, db };
+module.exports = { create, g, db, add };

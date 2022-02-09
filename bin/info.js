@@ -1,5 +1,5 @@
 const usage =
-  "\nUsage: bms <Platform>:<Action>:<Action_reference> name if needed.";
+  "\nUsage: bms <Platform>:<Action>:<Action_reference> name if needed.\n For further info pleas visit: https://www.npmjs.com/package/bms-cli-mg";
 
 const options = [
   {

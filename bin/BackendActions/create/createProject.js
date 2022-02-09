@@ -3,17 +3,17 @@ const path = require("path");
 const fs = require("fs");
 
 const afterRenamin = (secArg) => {
-  fs.readFile("./" + secArg + "/package.json", function (err, data) {
+  fs.readFile("./" + secArg[1] + "/package.json", function (err, data) {
     if (err) {
       return console.log(err);
     }
-    var result = data.toString().replace(/___project_name___/g, secArg);
+    var result = data.toString().replace(/___project_name___/g, secArg[1]);
 
-    fs.writeFile("./" + secArg + "/package.json", result, function (err) {
+    fs.writeFile("./" + secArg[1] + "/package.json", result, function (err) {
       if (err) return console.log(err);
       console.log(
         "Project created:\ncd to " +
-          secArg +
+          secArg[1] +
           "\n - npm i to install modules\n - open README for more details."
       );
     });
@@ -22,7 +22,7 @@ const afterRenamin = (secArg) => {
 
 const afterCloning = (secArg) => {
   const oldDirName = "./fastify-restapi-prisma-boilerplate";
-  const newDirName = "./" + secArg;
+  const newDirName = "./" + secArg[1];
   try {
     fs.renameSync(oldDirName, newDirName);
     afterRenamin(secArg);
@@ -42,7 +42,7 @@ const cloneRepo = (secArg) => {
 const project = (secArg) => {
   if (secArg) {
     const dir = "./fastify-restapi-prisma-boilerplate";
-    const prDir = "./" + secArg;
+    const prDir = "./" + secArg[1];
     if (fs.existsSync(dir)) {
       if (fs.existsSync(prDir)) {
         afterRenamin(secArg);

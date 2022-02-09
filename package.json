@@ -1,6 +1,6 @@
 {
-  "name": "bms-cli",
-  "version": "1.0.0",
+  "name": "bms-cli-mg",
+  "version": "1.0.5",
   "description": "backend mobile simplified",
   "main": "index.js",
   "author": "Mahery",
@@ -9,8 +9,8 @@
     "cli",
     "bms",
     "fastify",
-    "react-native",
-    "mobile",
+    "rest-api",
+    "nodejs",
     "backend"
   ],
   "bin": {
