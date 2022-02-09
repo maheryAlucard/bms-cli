@@ -25,6 +25,13 @@ Add Model sets
 bms backend:g:model <model_name>
 ```
 
+Add new route method for existing model
+Available method: [POST], [GET], [PUT], [DELETE]
+
+```bash
+bms backend:add:route <model_name> <method> <route_name>
+```
+
 Add socket message handler
 
 ```bash
